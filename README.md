@@ -1,6 +1,6 @@
-# Example PSR-6: PSR-Cache
+## Example PHP Cache
 
-PSR-6 の例
+## PSR-6 PSR-Cache
 
 - http://www.php-fig.org/psr/psr-6/
 
@@ -39,4 +39,19 @@ if ($item->isHit() === false) {
 }
 
 return $item->get();
+```
+
+## PSR-16 Simple Cache
+
+- http://www.php-fig.org/psr/psr-16/
+
+よくある get/set なシンプルなキャッシュ。
+
+```php
+$cache->set('simple', 123);
+$val = $cache->set('simple');
+
+$cache->delete('simple');
+
+$cache->clear();
 ```
